@@ -10,12 +10,15 @@ services:
             - "@session"
             - "%lightsaml.store.request_session_prefix%"
             - "%lightsaml.store.request_session_sufix%"
+        public: true
 
     lightsaml.store.id_state:
         class: LightSaml\Store\Id\NullIdStore
+        public: true
 
     lightsaml.store.sso_state:
         class: LightSaml\Store\Sso\SsoStateSessionStore
         arguments:
             - "@session"
             - "%lightsaml.store.sso_state_session_key%"
+        public: true

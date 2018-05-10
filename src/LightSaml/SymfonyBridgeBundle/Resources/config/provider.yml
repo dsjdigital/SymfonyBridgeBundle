@@ -1,9 +1,12 @@
 services:
     lightsaml.provider.attribute_value:
         class: LightSaml\Provider\Attribute\FixedAttributeValueProvider
+        public: true
 
     lightsaml.provider.session_info:
         class: LightSaml\Provider\Session\FixedSessionInfoProvider
+        public: true
 
     lightsaml.provider.name_id:
         class: LightSaml\Provider\NameID\FixedNameIdProvider
+        public: true
